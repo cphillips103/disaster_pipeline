@@ -8,7 +8,7 @@ from nltk.tokenize import word_tokenize
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
-# from sklearn.externals import joblib
+# from sklearn.externals import joblib # changed to joblib because server couldn't import externals
 from sqlalchemy import create_engine
 import joblib
 
@@ -39,7 +39,7 @@ model = joblib.load("../models/classifier.pkl")
 def index():
     
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
+
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
@@ -47,6 +47,7 @@ def index():
     category_count = (df.iloc[:,4:] != 0).sum().values
     
     graphs = [
+        #graph 1
         {
             'data': [
                 Bar(
@@ -65,7 +66,7 @@ def index():
                 }
             }
         },
-         # GRAPH 2 - distribution of categories   
+         # graph 2
         {
             'data': [
                 Bar(
@@ -81,7 +82,7 @@ def index():
                 },
                 'xaxis': {
                     'title': "Category",
-                    'tickangle': 35
+                    'tickangle': 20
                 }
             }
         }        
@@ -114,7 +115,7 @@ def go():
 
 
 def main():
-    app.run(host='0.0.0.0', port=3001, debug=True)
+    app.run(host='0.0.0.0', port=3001, debug=True) #0.0.0.0 would be used if running on local server.
 
 
 if __name__ == '__main__':
