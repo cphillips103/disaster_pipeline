@@ -33,6 +33,7 @@ Step 2: ML Pipeline Preparation
 - Fits model to data with grid search to tune the parameters
 - Prints accuarcy of the results of the model fit.
 - Saves best model in Pickle format.
+    -Note: pickle file not included in Github repository due to size limitations.
 
 Step 3. Run the Flask Web App
 - Uses database and saved model to start Flask based web app.
@@ -60,6 +61,9 @@ sets.
 3. Go to http://0.0.0.0:3001/ for local server only
 
 Environmental requiremnets
+Note: make sure environments where flask production server resides or else scikit-learn versions can cause
+issues with deploying website and message prediction...
+
 Flask==0.12.5
 ipython==6.5.0
 joblib==0.11
