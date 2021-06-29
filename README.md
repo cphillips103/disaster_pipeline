@@ -4,7 +4,7 @@
 ## Disaster Response Pipeline
 ### A Figure 8 dataset
 
-![file1]('images/splash.png')
+![file1]('https://github.com/cphillips103/disaster_pipeline/blob/main/images/splash.png')
 
 
 Step 1: ETL Pipeline
@@ -37,14 +37,14 @@ Step 2: ML Pipeline Preparation
 Step 3. Run the Flask Web App
 - Uses database and saved model to start Flask based web app.
 
-![file1]('images/overview_graph.png')
+![file1]('https://github.com/cphillips103/disaster_pipeline/blob/main/images/overview_graph.png')
 
 Notes about the Data:
 There are some categories in the provided data that have few examples
 like "child_alone", which can create an imbalance in the test and training
 sets.
 
-![file1]('images/distribution.png')
+![file1]('https://github.com/cphillips103/disaster_pipeline/blob/main/images/distribution.png')
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
